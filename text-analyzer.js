@@ -1,5 +1,5 @@
 function wordCount(text) {
-  return text.split(" ").length;
+  return text.trim().split(" ").length;
 }
 
 wordCount("Hello world");
