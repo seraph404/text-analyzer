@@ -9,4 +9,7 @@ describe("textAnalyzer - wordCount", () => {
   test("accounts for leading whitespace in ' Hello, world!", () => {
     expect(wordCount(" Hello, world!")).toBe(2);
   });
+  test("accounts for tabs", () => {
+    expect(wordCount("Hello\tworld")).toBe(2);
+  });
 });
