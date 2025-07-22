@@ -1,5 +1,5 @@
 const { wordCount } = require("./text-analyzer.js");
-describe("textAnalyzer - wordCount", () => {
+describe("wordCount", () => {
   test("returns 2 for 'Hello world'", () => {
     expect(wordCount("Hello world")).toBe(2);
   });
@@ -20,5 +20,13 @@ describe("textAnalyzer - wordCount", () => {
   });
   test("accounts for new lines and tabs", () => {
     expect(wordCount("Hello \n \t world")).toBe(2);
+  });
+});
+
+const { mostCommonWord } = require("./text-analyzer.js");
+
+describe("mostCommonWord", () => {
+  test("returns 'world' for 'Hello world world'", () => {
+    expect(mostCommonWord("Hello world world")).toBe("world");
   });
 });
